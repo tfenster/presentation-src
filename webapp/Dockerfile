@@ -1,0 +1,13 @@
+#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+#For more information, please see https://aka.ms/containercompat
+
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1809 AS build
+EXPOSE 5000
+WORKDIR /src
+COPY ["webapp.csproj", "./"]
+RUN dotnet restore "./webapp.csproj"
+COPY . .
+RUN dotnet build "webapp.csproj" -c Release -o /app/build
+RUN dotnet publish "webapp.csproj" -c Release -o /app/publish
+WORKDIR /app
+ENTRYPOINT ["dotnet", "webapp.dll"]
