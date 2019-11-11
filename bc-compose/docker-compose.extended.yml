@@ -1,0 +1,57 @@
+version: '3.1'
+
+services:
+  
+  sql:
+    image: chrml/mssql-server-windows-express:1809
+    hostname: sql
+    environment: 
+      - ACCEPT_EULA=Y
+      - sa_password=Passw0rd*123
+      - attach_dbs=[{'dbName':'Cronus','dbFiles':['C:\\databases\\Demo Database NAV (15-0).mdf','C:\\databases\\Demo Database NAV (15-0).ldf']},{'dbName':'CronusTest','dbFiles':['C:\\databases-test\\Demo Database NAV (15-0).mdf','C:\\databases-test\\Demo Database NAV (15-0).ldf']}]
+    networks:
+      - app-net
+    volumes: 
+      - C:/databases/:C:/databases/
+      - C:/databases-test/:C:/databases-test/
+
+  nav:
+    image: mcr.microsoft.com/businesscentral/onprem:ltsc2019
+    hostname: nav
+    ports:
+      - 80:80
+    environment: 
+      - ACCEPT_EULA=Y
+      - usessl=n
+      - databaseusername=sa
+      - databasepassword=Passw0rd*123
+      - databaseserver=sql 
+      - databasename=Cronus 
+      - customWebSettings=Productname=Production
+    depends_on:
+      - sql
+    networks:
+      - app-net
+
+  nav-test:
+    image: mcr.microsoft.com/businesscentral/onprem:ltsc2019
+    hostname: nav-test
+    ports:
+      - 8080:80
+    environment: 
+      - ACCEPT_EULA=Y
+      - usessl=n
+      - databaseusername=sa
+      - databasepassword=Passw0rd*123
+      - databaseserver=sql 
+      - databasename=CronusTest
+      - customWebSettings=Productname=Test
+    depends_on:
+      - sql
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    external:
+      name: nat
