@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+
+  wp:
+    image: dshatohin/wordpress-servercore:5.2-1809
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpressuser
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+
+  db:
+    image: dshatohin/mysql-servercore:5.7-1809
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PWD: rootpassword
+      DB_NAME: wordpress
+      DB_USER: wordpressuser
+      DB_USER_PWD: password
+
+  adminer:
+    image: dshatohin/adminer-servercore:4.7-nginx-1809
+    ports:
+      - 8000:80
