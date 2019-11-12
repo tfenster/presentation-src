@@ -9,5 +9,5 @@ RUN dotnet restore "./webapp.csproj"
 COPY . .
 RUN dotnet build "webapp.csproj" -c Release -o /app/build
 RUN dotnet publish "webapp.csproj" -c Release -o /app/publish
-WORKDIR /app
+WORKDIR /app/publish
 ENTRYPOINT ["dotnet", "webapp.dll"]
