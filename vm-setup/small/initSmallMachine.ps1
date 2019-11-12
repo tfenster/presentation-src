@@ -4,3 +4,5 @@ choco install microsoft-edge-insider
 choco install googlechrome
 choco install firefox
 choco install docker-cli
+
+Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose
