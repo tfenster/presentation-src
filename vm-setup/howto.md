@@ -1,1 +1,1 @@
-.\deploy.ps1 -subscriptionId "94670b10-08d0-4d17-bcfe-e01f701be9ff" -location "westeurope" -name "tf2" -adminPassword (ConvertTo-SecureString -String "" -AsPlainText -Force)
+s. Excel
