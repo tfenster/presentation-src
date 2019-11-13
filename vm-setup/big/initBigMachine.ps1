@@ -12,3 +12,6 @@ Expand-Archive .\sources.zip
 rm .\sources.zip
 
 Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose
+
+try { code --install-extension ms-dynamics-smb.al | Out-Null } catch {}
+try { code --install-extension ms-azuretools.vscode-docker | Out-Null } catch {}
