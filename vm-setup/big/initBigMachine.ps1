@@ -13,5 +13,6 @@ rm .\sources.zip
 
 Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose
 
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 try { code --install-extension ms-dynamics-smb.al | Out-Null } catch {}
 try { code --install-extension ms-azuretools.vscode-docker | Out-Null } catch {}
