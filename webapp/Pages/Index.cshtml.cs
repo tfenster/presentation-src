@@ -13,5 +13,9 @@ namespace webapp.Pages
         {
 
         }
+
+        public string GetHostname() {
+            return Environment.MachineName;
+        }
     }
 }
