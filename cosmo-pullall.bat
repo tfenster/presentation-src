@@ -1,0 +1,14 @@
+docker pull mcr.microsoft.com/windows/servercore:1809
+docker pull mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
+docker pull mcr.microsoft.com/businesscentral/sandbox:ltsc2019
+docker pull mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1809
+docker pull mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1809
+docker pull dshatohin/wordpress-servercore:5.2-1809
+docker pull dshatohin/mysql-servercore:5.7-1809
+docker pull dshatohin/adminer-servercore:4.7-nginx-1809
+docker pull portainer/portainer
+docker pull mcr.microsoft.com/businesscentral/onprem:ltsc2019
+docker pull mcr.microsoft.com/dynamicsnav:2018-gb-ltsc2019
+docker pull chrml/mssql-server-windows-express:1809
+docker pull mcr.microsoft.com/businesscentral/onprem:1810-ltsc2019
+docker pull mcr.microsoft.com/windows/servercore:ltsc2019

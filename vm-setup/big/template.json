@@ -204,7 +204,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://raw.githubusercontent.com/tfenster/presentation-src/techdays-19/vm-setup/big/initBigMachine.ps1"
+                        "https://raw.githubusercontent.com/tfenster/presentation-src/cosmo-docker/vm-setup/big/initBigMachine.ps1"
                     ]
                 },
                 "protectedSettings": {

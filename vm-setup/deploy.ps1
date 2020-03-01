@@ -156,23 +156,23 @@ else{
 
 # Start the deployment
 Write-Host "Starting big deployment...";
-New-AzResourceGroupDeployment -ResourceGroupName $name -Name "$name-big-deployment" -TemplateFile (Join-Path $PSScriptRoot "big\template.json") -TemplateParameterFile (Join-Path $PSScriptRoot "\big\parameters.json") -location $location -adminPassword $adminPassword -dnsLabelPrefix "td19-$name-big" -AsJob
+New-AzResourceGroupDeployment -ResourceGroupName $name -Name "$name-big-deployment" -TemplateFile (Join-Path $PSScriptRoot "big\template.json") -TemplateParameterFile (Join-Path $PSScriptRoot "\big\parameters.json") -location $location -adminPassword $adminPassword -dnsLabelPrefix "cosmo-$name-big" -AsJob
 Write-Host "Starting small deployment...";
-New-AzResourceGroupDeployment -ResourceGroupName $name -Name "$name-small-deployment" -TemplateFile (Join-Path $PSScriptRoot "small\template.json") -TemplateParameterFile (Join-Path $PSScriptRoot "small\parameters.json") -location $location -adminPassword $adminPassword -dnsLabelPrefix "td19-$name-small" -AsJob
+New-AzResourceGroupDeployment -ResourceGroupName $name -Name "$name-small-deployment" -TemplateFile (Join-Path $PSScriptRoot "small\template.json") -TemplateParameterFile (Join-Path $PSScriptRoot "small\parameters.json") -location $location -adminPassword $adminPassword -dnsLabelPrefix "cosmo-$name-small" -AsJob
 
 # Send mail
 $smtpServer = "smtp.office365.com"
 $smtpPort = "587"
 $body = "Hello $personName,<br />&nbsp;<br/>"
-$body += "welcome to the `"Docker on Windows 101 and Business Central on Docker`" workshop at NAV TechDays! Please use the following connection information to access your VMs through a Remote Desktop connection:<br />&nbsp;<br/>"
-$body += "Big VM (host): computer name td19-$name-big.$location.cloudapp.azure.com, user name \TechDaysAdmin, password $adminPasswordPlain<br/>"
-$body += "Small VM (client): computer name td19-$name-small.$location.cloudapp.azure.com, user name \TechDaysAdmin, password $adminPasswordPlain<br/>&nbsp;<br />"
+$body += "welcome to the `"Docker on Windows 101 and Business Central on Docker`" workshop at COSMO CONSULT! Please use the following connection information to access your VMs through a Remote Desktop connection:<br />&nbsp;<br/>"
+$body += "Big VM (host): computer name cosmo-$name-big.$location.cloudapp.azure.com, user name \CosmoAdmin, password $adminPasswordPlain<br/>"
+$body += "Small VM (client): computer name cosmo-$name-small.$location.cloudapp.azure.com, user name \CosmoAdmin, password $adminPasswordPlain<br/>&nbsp;<br />"
 $body += "Please note that it might take up to 20 minutes until the VMs are available<br/>&nbsp;<br />"
 $body += "Have fun,<br />Tobias"
 $mailParam = @{
     To = $mailTo
     From = $mailFrom
-    Subject = "Access information for your NAV TechDays workshop VM"
+    Subject = "Access information for your COSMO CONSULT workshop VM"
     Body = $body
     SmtpServer = $smtpServer
     Port = $smtpPort

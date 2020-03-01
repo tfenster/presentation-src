@@ -6,13 +6,13 @@
             "value": "westeurope"
         },
         "networkInterfaceName": {
-            "value": "techdays-big380"
+            "value": "cosmo-big380"
         },
         "enableAcceleratedNetworking": {
             "value": true
         },
         "networkSecurityGroupName": {
-            "value": "techdays-big-nsg"
+            "value": "cosmo-big-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
@@ -35,7 +35,7 @@
             "value": "default"
         },
         "virtualNetworkName": {
-            "value": "techdays-vnet"
+            "value": "cosmo-vnet"
         },
         "addressPrefixes": {
             "value": [
@@ -53,7 +53,7 @@
             ]
         },
         "publicIpAddressName": {
-            "value": "techdays-big-ip"
+            "value": "cosmo-big-ip"
         },
         "publicIpAddressType": {
             "value": "Dynamic"
@@ -62,10 +62,10 @@
             "value": "Basic"
         },
         "virtualMachineName": {
-            "value": "techdays-big"
+            "value": "cosmo-big"
         },
         "virtualMachineRG": {
-            "value": "techdays-bug"
+            "value": "cosmo-bug"
         },
         "osDiskType": {
             "value": "Standard_LRS"
@@ -77,7 +77,7 @@
             "value": "Standard_D16s_v3"
         },
         "adminUsername": {
-            "value": "TechDaysAdmin"
+            "value": "CosmoAdmin"
         },
         "adminPassword": {
             "value": null

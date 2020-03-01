@@ -7,7 +7,7 @@ choco install googlechrome
 choco install firefox
 
 cd c:\
-wget https://github.com/tfenster/presentation-src/archive/techdays-19.zip -OutFile sources.zip
+wget https://github.com/tfenster/presentation-src/archive/cosmo-docker.zip -OutFile sources.zip
 Expand-Archive .\sources.zip
 rm .\sources.zip
 
