@@ -24,6 +24,7 @@ services:
       - databasepassword=Passw0rd*123
       - databaseserver=sql 
       - databasename=Cronus 
+      - databaseinstance=
     depends_on:
       - sql
     networks:
