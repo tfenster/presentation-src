@@ -26,7 +26,8 @@ services:
       - databaseusername=sa
       - databasepassword=Passw0rd*123
       - databaseserver=sql 
-      - databasename=Cronus 
+      - databasename=Cronus  
+      - databaseinstance=
       - customWebSettings=Productname=Production
     depends_on:
       - sql
@@ -43,7 +44,8 @@ services:
       - usessl=n
       - databaseusername=sa
       - databasepassword=Passw0rd*123
-      - databaseserver=sql 
+      - databaseserver=sql  
+      - databaseinstance=
       - databasename=CronusTest
       - customWebSettings=Productname=Test
     depends_on:
