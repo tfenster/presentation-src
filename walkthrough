@@ -8,3 +8,6 @@ cargo build --target wasm32-wasi
 wasmtime target/wasm32-wasi/debug/demo.wasm
 
 wasmtime target/wasm32-wasi/debug/demo.wasm --dir=. --dir=/tmp test.txt /tmp/test2.txt
+
+download demo.wasm locally
+run wasmtime
