@@ -1,0 +1,4 @@
+cargo new demo
+cd demo
+cargo build --target wasm32-wasi
+wasmtime target/wasm32-wasi/debug/demo.wasm
