@@ -2,3 +2,9 @@ cargo new demo
 cd demo
 cargo build --target wasm32-wasi
 wasmtime target/wasm32-wasi/debug/demo.wasm
+
+replace main.rs with 1, 2 and 3
+cargo build --target wasm32-wasi
+wasmtime target/wasm32-wasi/debug/demo.wasm
+
+wasmtime target/wasm32-wasi/debug/demo.wasm --dir=. --dir=/tmp test.txt /tmp/test2.txt
