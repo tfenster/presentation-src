@@ -1,0 +1,12 @@
+{
+  "name": "Rust Wasm wasmtime",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "remoteEnv": {
+	  "PATH": "${containerEnv:PATH}:/usr/local/lib/wasi-sdk-17.0/bin"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {},
+    "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/rust-wasi:0": {},
+    "devwasm.azurecr.io/dev-wasm/dev-wasm-feature/wasmtime-wasi:0": {}
+  }
+}
