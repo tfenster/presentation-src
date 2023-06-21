@@ -4,5 +4,12 @@
 		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {
 			"version": "0.26.0"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.Go"
+			]
+		}
 	}
 }
