@@ -3,7 +3,8 @@
 	"features": {
 		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {
 			"version": "0.26.0"
-		}
+		},
+		"ghcr.io/lee-orr/rusty-dev-containers/cargo-make:0": {}
 	},
 	"customizations": {
 		"vscode": {
@@ -11,5 +12,6 @@
 				"golang.Go"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "go mod download"
 }
