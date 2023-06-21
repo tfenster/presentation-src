@@ -9,7 +9,9 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"golang.Go"
+				"golang.Go",
+				"ms-dynamics-smb.al",
+				"stefanmaron.allanguagelinuxpatcher"
 			]
 		}
 	},
