@@ -1,0 +1,8 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {
+			"version": "0.26.0"
+		}
+	}
+}
