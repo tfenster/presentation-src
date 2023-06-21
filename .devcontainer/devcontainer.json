@@ -1,10 +1,9 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
 	"features": {
 		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {
 			"version": "0.26.0"
-		},
-		"ghcr.io/lee-orr/rusty-dev-containers/cargo-make:0": {}
+		}
 	},
 	"customizations": {
 		"vscode": {
@@ -12,8 +11,10 @@
 				"golang.Go",
 				"ms-dynamics-smb.al",
 				"stefanmaron.allanguagelinuxpatcher"
-			]
+			],
+			"settings": {
+				"allanguagelinuxpatcher.dotnet-path": "/usr/bin/dotnet"
+			}
 		}
-	},
-	"postCreateCommand": "go mod download"
+	}
 }
