@@ -3,6 +3,9 @@
 	"features": {
 		"devwasm.azurecr.io/dev-wasm/dev-wasm-feature/golang-wasi:0": {
 			"version": "0.26.0"
+		},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest"
 		}
 	},
 	"customizations": {
@@ -16,5 +19,6 @@
 				"allanguagelinuxpatcher.dotnet-path": "/usr/bin/dotnet"
 			}
 		}
-	}
+	},
+	"postCreateCommand": "go mod download"
 }

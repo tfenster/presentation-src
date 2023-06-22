@@ -4,7 +4,7 @@ pageextension 50101 Pageusercontrol extends "Customer Card"
     {
         addafter(General)
         {
-            usercontrol(MyLogoControl; MyLogoControl)
+            usercontrol(ImageAdjustControl; ImageAdjustControl)
             {
                 ApplicationArea = All;
             }
@@ -21,7 +21,7 @@ pageextension 50101 Pageusercontrol extends "Customer Card"
                 ApplicationArea = All;
                 trigger OnAction()
                 begin
-                    CurrPage.MyLogoControl.connectImage();
+                    CurrPage.ImageAdjustControl.connectImage();
                 end;
             }
         }

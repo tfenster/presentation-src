@@ -1,5 +1,5 @@
 
-controladdin MyLogoControl
+controladdin ImageAdjustControl
 {
     RequestedHeight = 100;
     MinimumHeight = 100;
