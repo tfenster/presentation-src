@@ -3,11 +3,13 @@ cd demo
 cargo build --target wasm32-wasi
 wasmtime target/wasm32-wasi/debug/demo.wasm
 
+download demo.wasm locally
+run wasmtime
+
 replace main.rs with 1, 2 and 3
 cargo build --target wasm32-wasi
 wasmtime target/wasm32-wasi/debug/demo.wasm
 
+echo Hello BC TechDays > test.txt
+wasmtime target/wasm32-wasi/debug/demo.wasm test.txt /tmp/test2.txt
 wasmtime target/wasm32-wasi/debug/demo.wasm --dir=. --dir=/tmp test.txt /tmp/test2.txt
-
-download demo.wasm locally
-run wasmtime
