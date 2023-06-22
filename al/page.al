@@ -21,7 +21,7 @@ pageextension 50150 CustomerCheck extends "Customer Card"
         }
     }
 
-    trigger OnOpenPage()
+    trigger OnAfterGetRecord()
     var
         Client: HttpClient;
         Response: HttpResponseMessage;
