@@ -1,7 +1,6 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/typescript:2": {}
-  },
-	"postCreateCommand": "curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash; sudo mv ./spin /usr/local/bin/spin"
+    "ghcr.io/lee-orr/rusty-dev-containers/fermyon-spin:0": {}
+  }
 }
