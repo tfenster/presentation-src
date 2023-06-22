@@ -1,0 +1,6 @@
+spin new
+cd bctechdays-demo
+spin build
+spin up
+spin login
+spin deploy
