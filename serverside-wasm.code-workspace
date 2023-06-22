@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "al",
+            "name": "AL"
+        },
+        {
+            "path": "bctechdays-store",
+            "name": "Store"
+        },
+        {
+            "path": "bctechdays-demo"
+        },
+        {
+            "path": ".devcontainer"
+        }
+    ]
+}

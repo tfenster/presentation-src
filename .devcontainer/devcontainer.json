@@ -3,5 +3,17 @@
   "features": {
     "ghcr.io/devcontainers/features/go:1": {}
   },
-  "postCreateCommand": "curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash; sudo mv ./spin /usr/local/bin/spin; wget https://github.com/tinygo-org/tinygo/releases/download/v0.28.1/tinygo_0.28.1_amd64.deb; sudo dpkg -i tinygo_0.28.1_amd64.deb; curl -fsSL https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 -o hey; sudo mv hey /usr/local/bin/hey; sudo chmod 755 /usr/local/bin/hey"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.Go",
+				"ms-dynamics-smb.al",
+				"stefanmaron.allanguagelinuxpatcher"
+			],
+			"settings": {
+				"allanguagelinuxpatcher.dotnet-path": "/usr/bin/dotnet"
+			}
+		}
+	},
+  "postCreateCommand": "curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash; sudo mv ./spin /usr/local/bin/spin; wget https://github.com/tinygo-org/tinygo/releases/download/v0.28.1/tinygo_0.28.1_amd64.deb; sudo dpkg -i tinygo_0.28.1_amd64.deb; curl -fsSL https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 -o hey; sudo mv hey /usr/local/bin/hey; sudo chmod 755 /usr/local/bin/hey; sudo apt update; sudo apt install -y dotnet-sdk-6.0"
 }

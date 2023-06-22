@@ -1,6 +1,13 @@
 spin new
+    bctechdays-demo
 cd bctechdays-demo
 spin build
 spin up
+hey -c 50 -n 10000 http://localhost:3000
+
 spin login
 spin deploy
+
+show store code
+show key_value_stores in spin.toml
+deploy to BC

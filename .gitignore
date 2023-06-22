@@ -1,0 +1,5 @@
+.alpackages
+*.app
+main.wasm
+bctechdays-store/.spin/
+rad.json
